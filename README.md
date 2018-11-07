@@ -1,24 +1,6 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+本项目是自己为了参加一个[线上 Hackthon](https://www.v2ex.com/t/499071)混个参赛奖而写的demo，主要就是使用了[daily_image](https://github.com/renyijiu/daily_image)这个gem包。
 
-Things you may want to cover:
+另外也是作为使用自己gem包的一个示例，🎉
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+效果展示：[🌰 例子](https://www.v2ex.com/t/504418)
