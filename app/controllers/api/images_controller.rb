@@ -8,7 +8,7 @@ class Api::ImagesController < ApplicationController
 
     if image.blank?
       flag, image = GenerateImageService.call(@date)
-      render_error('对不起，服务器网络开小差了，再重新试试呗') and return unless flag
+      render_error("@#{params['user_name']}，对不起，服务器网络开小差了，再重新试试呗") and return unless flag
     end
 
     render json: response_data(image)
@@ -20,7 +20,7 @@ class Api::ImagesController < ApplicationController
     date = params['text'].split.last
     @date = Date.parse(date) rescue nil
 
-    render_error('输入的日期格式不对，🌰：2018-11-08') and return if @date.blank?
+    render_error("@#{params['user_name']}，输入的日期不对，最小1900年，🌰：2018-11-08") and return if @date.blank? || (@date.year < 1900)
   end
 
   def response_data(image)
